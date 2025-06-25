@@ -19,13 +19,15 @@ Papa.parse('data/under200_latest.csv', {
     });
   }
 });
-document.getElementById('searchInput').addEventListener('input', function () {
-  const filter = this.value.toLowerCase();
-  const rows = document.querySelectorAll('#stock-table tbody tr');
+window.onload = function () {
+  document.getElementById('searchInput').addEventListener('input', function () {
+    const filter = this.value.toLowerCase();
+    const rows = document.querySelectorAll('#stock-table tbody tr');
 
-  rows.forEach(row => {
-    const name = row.cells[0].textContent.toLowerCase();
-    const symbol = row.cells[1].textContent.toLowerCase();
-    row.style.display = name.includes(filter) || symbol.includes(filter) ? '' : 'none';
+    rows.forEach(row => {
+      const name = row.cells[0].textContent.toLowerCase();
+      const symbol = row.cells[1].textContent.toLowerCase();
+      row.style.display = name.includes(filter) || symbol.includes(filter) ? '' : 'none';
+    });
   });
-});
+};
