@@ -9,8 +9,16 @@ print("📌 Starting script...")
 try:
     print("🔎 Fetching NSE symbols using nsetools...")
     nse = Nse()
-    symbols = nse.get_stock_codes()
-    tickers = [s + '.NS' for s in symbols.keys() if s != 'SYMBOL']
+    symbols_raw = nse.get_stock_codes()
+    
+    # Check if it's a dict or list
+    if isinstance(symbols_raw, dict):
+        tickers = [s + '.NS' for s in symbols_raw.keys() if s != 'SYMBOL']
+    elif isinstance(symbols_raw, list):
+        tickers = [s + '.NS' for s in symbols_raw]
+    else:
+        raise TypeError("⚠️ Unexpected format of stock codes returned by nsetools")
+
     print(f"✅ Loaded {len(tickers)} NSE symbols")
 
     def filter_under_200(tickers):
