@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StoxFusion</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">StoxFusion</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Insights</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Discover India’s Smartest Penny Stock Picks</h1>
+    <p>Updated daily after market close – No sign-up, no noise, just value.</p>
+    <a href="#stocks" class="cta">See Today’s Picks</a>
+  </section>
+
+  <section id="stocks" class="table-section">
+    <h2>📈 Top Stocks Under ₹200 — Updated Daily at 3:30 PM IST</h2>
+    <table id="stock-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Symbol</th>
+          <th>Price</th>
+          <th>Volume</th>
+          <th>Market Cap</th>
+          <th>New</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- CSV Data Loads Here -->
+      </tbody>
+    </table>
+    <p class="footer-note">Data auto-sourced from NSE. Powered by <strong>StoxFusion</strong>.</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

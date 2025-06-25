@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
+  padding-top: 80px;
+}
+
+header {
+  background-color: #0F172A;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  color: #0F172A;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #475569;
+  margin-top: 10px;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #2563EB;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.table-section {
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+#stock-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#stock-table th,
+#stock-table td {
+  padding: 12px;
+  border: 1px solid #E2E8F0;
+  text-align: center;
+  font-size: 14px;
+}
+
+#stock-table th {
+  background-color: #F1F5F9;
+  font-weight: bold;
+}
+
+.footer-note {
+  text-align: center;
+  color: #94A3B8;
+  margin-top: 20px;
+}
