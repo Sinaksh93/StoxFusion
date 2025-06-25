@@ -93,3 +93,13 @@ nav a {
   color: #94A3B8;
   margin-top: 20px;
 }
+#searchInput {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+}
