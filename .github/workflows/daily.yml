@@ -1,0 +1,34 @@
+name: Daily Stock Screener
+
+on:
+  schedule:
+    - cron: '30 3 * * *'  # 9:00 AM IST daily
+  workflow_dispatch:      # Optional: allows manual run
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        pip install yfinance pandas nsetools
+
+    - name: Run Screener Script
+      run: python run_daily.py
+
+    - name: Commit results
+      run: |
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+        git add under200_*.csv
+        git commit -m "📈 Daily screener update"
+        git push
