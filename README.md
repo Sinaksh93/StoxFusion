@@ -1,2 +1,2 @@
 # StoxFusion
-Automated AI Penny stock Screener
+Automated AI Penny Stock Screener
